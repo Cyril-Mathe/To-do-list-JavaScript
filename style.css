@@ -1,0 +1,8 @@
+section.vue:not(.visible) {
+    display: none;
+  }
+
+
+  section.vue > article {
+    border: 1px solid black;
+  }
