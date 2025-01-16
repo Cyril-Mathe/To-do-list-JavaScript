@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To do list</title>
+</head>
+<body>
+    <nav>
+        <button class="changervue" data-vue-a-afficher="liste" id="changerVueListe">Liste</button>
+        <button class="changervue" data-vue-a-afficher="creation" id="changerVueCreation">Création</button>
+      </nav>
+    
+    
+      <hr>
+    
+    
+      <!-- Création de todo -->
+      <section class="vue" id="creation">
+        <form>
+          <label for="titre">Titre</label>
+          <input type="text" name="titre" id="titre" required>
+          <br>
+          <label for="description">Description</label>
+          <textarea name="description" id="description" required></textarea>
+          <br>
+          <button type="submit">Ajouter</button>
+        </form>
+      </section>
+    
+    
+      <!-- Lister les todos -->
+      <section class="vue visible" id="liste">
+        liste
+      </section>
+    
+    
+      <!-- Détails todo -->
+      <section class="vue" id="details">
+        <button id="supprimerTodo">Supprimer todo</button>
+        <form>
+          <input type="hidden" name="id" id="id_d">
+          <label for="etat_d">État</label>
+          <select name="etat" id="etat_d">
+            <option value="À faire">À faire</option>
+            <option value="Fait">Fait</option>
+          </select>
+          <br>
+          <label for="titre_d">Titre</label>
+          <input type="text" name="titre" id="titre_d">
+          <br>
+          <label for="description_d">Description</label>
+          <textarea name="description" id="description_d"></textarea>
+          <br>
+          <button type="submit">Modifier</button>
+        </form>
+      </section>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
